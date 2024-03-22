@@ -1,4 +1,4 @@
-# reto4-figurass
+# reto 4 Figuras
 
 Para la primera parte de este reto se utilizó el diagrama de clases dado para encontrar las distintas medidas de ciertas figuras que comparten atributos y clases.
 La primera parte del código consiste en definir dos clases principales de las cuales se deriva todo. Estas son la case Punto y la clase Línea:
@@ -77,6 +77,7 @@ class Shape:
         pass
 ```
 En esta parte se crea la clase Triangle a partir de la clase Shape.
+
 **Para los vértices**: Se le pide al usuario que ingrese las coordenadas de los vértices, y ese hace en el rango de 3 ya que un triángulo tiene 3 vértices. Acá se utiliza la clase Punto para organizar las coordenadas. Por último se agregan a la variable Vertex. Cada vértice se agrega a la lista de vértices.
 
 **Para las aristas**: Se establecen los tres vértices y se calcula el valor de sus distancias a partir de la clase Line
@@ -149,6 +150,7 @@ class TriRectangle(Triangle):
         super().__init__(False)
 ```
 Luego se creó la clase Rectangle la cual usa la misma lógica que la clase Triangle. 
+
 **Para las aristas y los vertices**: Se utilizó la misma lógica para hallar estas variables con la diferencia de que se utilizó en un rango de 4, ya que son 4 vertices y 4 aristas
 
 **Para el área**: Se multiplicaron dos valores de la lista de aristas y así se consiguió el área
@@ -234,7 +236,9 @@ angles = rectangle.compute_inner_angles()
 print("Los ángulos internos del rectángulo son:", angles)
 ```
 Para la segunda parte del reto, se utilizó el código antes hecho del restaurante y se le hicieron algunas modiificaciones:
+
 **Las modificaciones hechas fueron las siguientes**:
+
 1. Se agregaron setters y getters dentro de las subclases de MenuItem
 2. Se editó la parte que calcula el total en la clase Order, añadiendo un descuento del 10% en bebidas
 3. Se generó la clase Payment junto con la clases Cash y Card que se heredan de esta. Aquí se tienen en cuenta distintos atributos como el método a pagar, el total a pagar, el valor pagado, el cambio y características propias de la tarjeta como su número, su fecha de vencimiento y su código de seguridad. Además de una función para pagar.
